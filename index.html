@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <title>Frontend Mentor | Ping coming soon page</title>
+
+        <!-- My style -->
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <main>
+            <section class="logo">
+                <img src="images/logo.svg" alt="PING Logo" />
+            </section>
+
+            <h1 class="header">We are launching <span>soon!</span></h1>
+            <p class="info">Subscribe and get notified</p>
+
+            <form action="#">
+                <section class="input-wrapper">
+                    <input
+                        type="email"
+                        name="e-mail"
+                        id="email"
+                        placeholder="Your email address..."
+                    />
+                    <p id="alert">Please provide a valid email address</p>
+                    <p id="form-alert">
+                        Whoops! It looks like you forgot to add your email📧
+                    </p>
+                </section>
+                <button type="submit" id="submit-button">Notify Me</button>
+            </form>
+
+            <section class="illustration">
+                <img src="images/illustration-dashboard.png" alt="" />
+            </section>
+        </main>
+
+        <footer>
+            <section class="icon">
+                <a href="#" aria-label="facebook"
+                    ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="twitter"
+                    ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="#" aria-label="instagram"
+                    ><i class="fa-brands fa-instagram"></i
+                ></a>
+            </section>
+
+            <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+
+            <p class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    ><strong>Frontend Mentor</strong></a
+                >. Coded by
+                <a
+                    href="https://www.frontendmentor.io/profile/Albrt78"
+                    target="_blank"
+                    ><strong>Albrt78</strong></a
+                >.
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

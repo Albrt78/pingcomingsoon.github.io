@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+    /* Primary */
+    --Blue: hsl(223, 87%, 63%);
+
+    /* Secondary */
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+    /* Neutral */
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    min-height: 100dvh;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    padding-block-start: 5.5rem;
+}
+
+main .logo img {
+    width: 6rem;
+    padding-block-end: 2.6rem;
+}
+
+main .header {
+    font-weight: 300;
+    font-size: 3rem;
+    color: var(--Gray);
+    padding-block-end: 1rem;
+}
+
+main .header span {
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+}
+
+main .info {
+    font-weight: 300;
+    font-size: 1.25rem;
+    padding-block-end: 2.5rem;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 5.5rem;
+}
+
+main form .input-wrapper {
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+main form .input-wrapper input {
+    border: 1px solid var(--Pale-Blue);
+    width: 100%;
+    padding-inline-start: 2rem;
+    padding-inline-end: 1rem;
+    margin-inline-end: 12rem;
+    padding-block: 1rem;
+    border-radius: 50px;
+}
+
+::placeholder {
+    color: lightgray;
+    font-weight: 300;
+}
+
+main form .input-wrapper #alert,
+main form .input-wrapper #form-alert {
+    position: absolute;
+    padding-block-start: 0.5rem;
+    font-size: 0.7rem;
+    font-style: italic;
+    font-weight: 600;
+    visibility: hidden;
+    color: var(--Light-Red);
+    left: 2rem;
+}
+
+main form #submit-button {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 600;
+    background-color: var(--Blue);
+    border-radius: 50px;
+    box-shadow: 0 3px 10px 2px var(--Pale-Blue);
+    color: #fff;
+    padding: 1rem 3.2rem;
+    width: auto;
+    cursor: pointer;
+}
+
+main form #submit-button:hover {
+    opacity: 0.8;
+}
+
+main .illustration img {
+    width: 650px;
+    padding-bottom: 4rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+footer .icon a {
+    border: 1px solid var(--Pale-Blue);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: var(--Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .icon a:hover {
+    background-color: var(--Blue);
+    color: #fff;
+}
+
+footer .copyright {
+    font-size: 0.9rem;
+    color: var(--Gray);
+    padding-bottom: 3rem;
+}
+
+/* Media Query */
+@media screen and (max-width: 650.98px) {
+    main {
+        padding-block-start: 8rem;
+    }
+
+    main .logo img {
+        padding-block-end: 3rem;
+    }
+
+    main form {
+        flex-direction: column;
+    }
+
+    main form .input-wrapper input {
+        min-width: 500px;
+        margin-inline-end: 0;
+    }
+
+    main form .input-wrapper #alert,
+    main form .input-wrapper #form-alert {
+        top: 7.5rem;
+    }
+
+    main form #submit-button {
+        width: 100%;
+    }
+
+    main .illustration img {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 576.98px) {
+    main form .input-wrapper input {
+        min-width: 400px;
+    }
+
+    main .header {
+        font-size: 2.2rem;
+    }
+
+    main .illustration img {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 499.98px) {
+    main .illustration img {
+        width: 420px;
+    }
+}
+
+@media screen and (max-width: 420.98px) {
+    main form .input-wrapper input {
+        min-width: 330px;
+    }
+
+    main .header {
+        font-size: 1.9rem;
+    }
+
+    main .illustration img {
+        width: 350px;
+    }
+
+    footer .attribution {
+        font-size: 0.8rem;
+    }
+}
