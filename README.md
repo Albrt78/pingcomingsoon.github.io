@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Ping Coming Soon Page](https://github.com/Albrt78/frontend_mentor_project/tree/main/Ping%20Coming%20Soon%20Page%20Master)
--   Live Site URL: [Ping Coming Soon Page](https://65be0806229ee6710ac56832--luxury-lollipop-1dafdd.netlify.app/)
+-   Solution URL: [Ping Coming Soon Page](https://github.com/Albrt78/pingcomingsoon.github.io)
+-   Live Site URL: [Ping Coming Soon Page](https://albrt78.github.io/pingcomingsoon.github.io/)
 
 ### Built with
 
