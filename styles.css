@@ -361,7 +361,7 @@ footer .copyright {
 
 @media (max-width: 320.98px) {
     main .header {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     main .info {
@@ -369,7 +369,21 @@ footer .copyright {
     }
 
     main .illustration img {
-        width: 300px;
+        width: 290px;
+    }
+
+    main form {
+        padding-inline: 1rem;
+    }
+
+    main form .input-wrapper input,
+    main form #submit-button {
+        padding-inline: 1rem;
+        padding-block: 1.1rem;
+    }
+
+    ::placeholder {
+        font-size: 0.8rem;
     }
 }
 
