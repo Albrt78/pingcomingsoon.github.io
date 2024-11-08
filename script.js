@@ -4,6 +4,7 @@ const formAlert = document.querySelector("#form-alert");
 const inputEmail = document.querySelector("#email");
 const themeButton = document.querySelector(".theme");
 const illustrationImage = document.querySelector(".illustration");
+const body = document.querySelector("body");
 
 // Email Regex Pattern
 const emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
@@ -48,12 +49,13 @@ function loadTheme(theme) {
     } else {
         themeButton.innerHTML = `<i class="fa-solid fa-sun"></i>`;
     }
-    root.setAttribute("color-scheme", `${theme}`);
+    root.setAttribute("color-scheme", theme);
+    body.style.transition = "0.5s";
 }
 
 themeButton.addEventListener("click", () => {
     let theme = getCurrentTheme();
-    if (theme === "dark") {
+    if (theme == "dark") {
         theme = "light";
         illustrationImage.innerHTML =
             '<img src="images/illustration-dashboard.png" alt=""/>';
@@ -62,7 +64,7 @@ themeButton.addEventListener("click", () => {
         illustrationImage.innerHTML =
             '<img src="images/illustration-dashboard-dark.png" alt=""/>';
     }
-    localStorage.setItem("ping.theme", `${theme}`);
+    localStorage.setItem("ping.theme", theme);
     loadTheme(theme);
 });
 
