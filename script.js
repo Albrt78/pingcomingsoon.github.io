@@ -2,9 +2,11 @@ const submitButton = document.querySelector("#submit-button");
 const alert = document.querySelector("#alert");
 const formAlert = document.querySelector("#form-alert");
 const inputEmail = document.querySelector("#email");
+const themeButton = document.querySelector(".theme");
+const illustrationImage = document.querySelector(".illustration");
 
 // Email Regex Pattern
-const emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+const emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
 
 function emailValidation() {
     if (inputEmail.value.match(emailRegEx)) {
@@ -28,6 +30,46 @@ function formValidation() {
     }
 }
 
+function getCurrentTheme() {
+    let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+    localStorage.getItem("ping.theme")
+        ? (theme = localStorage.getItem("ping.theme"))
+        : null;
+    return theme;
+}
+
+function loadTheme(theme) {
+    const root = document.querySelector(":root");
+    if (theme === "dark") {
+        themeButton.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+    } else {
+        themeButton.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+    }
+    root.setAttribute("color-scheme", `${theme}`);
+}
+
+themeButton.addEventListener("click", () => {
+    let theme = getCurrentTheme();
+    if (theme === "dark") {
+        theme = "light";
+        illustrationImage.innerHTML =
+            '<img src="images/illustration-dashboard.png" alt=""/>';
+    } else {
+        theme = "dark";
+        illustrationImage.innerHTML =
+            '<img src="images/illustration-dashboard-dark.png" alt=""/>';
+    }
+    localStorage.setItem("ping.theme", `${theme}`);
+    loadTheme(theme);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    loadTheme(getCurrentTheme());
+});
+
 // Button Event
 submitButton.addEventListener("click", (e) => {
     formValidation();
@@ -38,3 +80,5 @@ submitButton.addEventListener("click", (e) => {
 inputEmail.addEventListener("input", () => {
     emailValidation();
 });
+
+localStorage.setItem("ping.theme", "light");
